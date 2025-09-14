@@ -1,0 +1,9 @@
+# Ignore artifacts:
+dist
+coverage
+.prettierrc
+eslint.config.mjs
+package-lock.json
+package.json
+tsconfig.json
+logs

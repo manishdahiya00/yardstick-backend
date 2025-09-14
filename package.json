@@ -1,0 +1,52 @@
+{
+  "name": "backend",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "bun run --watch src/server.ts",
+    "start": "bun run src/server.ts",
+    "format:fix": "prettier . --write",
+    "format:check": "prettier . --check",
+    "lint:fix": "eslint . --fix",
+    "lint:check": "eslint .",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "*.ts": [
+      "bun run format:fix",
+      "bun run lint:fix"
+    ]
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "prettier": "3.6.2"
+  },
+  "peerDependencies": {
+    "typescript": "^5.9.2"
+  },
+  "dependencies": {
+    "@eslint/js": "^9.35.0",
+    "@prisma/client": "^6.16.1",
+    "@types/cookie-parser": "^1.4.9",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.3",
+    "@types/jsonwebtoken": "^9.0.10",
+    "argon2": "^0.44.0",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "eslint": "^9.35.0",
+    "express": "^5.1.0",
+    "express-rate-limit": "^8.1.0",
+    "helmet": "^8.1.0",
+    "http-errors": "^2.0.0",
+    "husky": "^9.1.7",
+    "jsonwebtoken": "^9.0.2",
+    "lint-staged": "^16.1.6",
+    "prisma": "^6.16.1",
+    "typescript-eslint": "^8.43.0",
+    "winston": "^3.17.0",
+    "winston-daily-rotate-file": "^5.0.0",
+    "zod": "^4.1.8"
+  }
+}
