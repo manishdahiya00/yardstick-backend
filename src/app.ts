@@ -12,9 +12,9 @@ import {
     type RateLimitRequestHandler,
     ipKeyGenerator,
 } from "express-rate-limit";
-import authRoutes from "./routes/auth.routes";
-import notesRoutes from "./routes/notes.routes";
-import logger from "./config/logger";
+import authRoutes from "./routes/auth.routes.js";
+import notesRoutes from "./routes/notes.routes.js";
+import logger from "./config/logger.js";
 import { HttpError } from "http-errors";
 
 const app: Express = express();

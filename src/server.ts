@@ -1,5 +1,5 @@
-import app from "./app";
-import { ENV } from "./config/env";
+import app from "./app.js";
+import { ENV } from "./config/env.js";
 
 const startServer = () => {
     try {
