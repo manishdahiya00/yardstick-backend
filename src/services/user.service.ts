@@ -1,6 +1,6 @@
 import createHttpError from "http-errors";
-import db from "../config/db";
-import logger from "../config/logger";
+import db from "../config/db.js";
+import logger from "../config/logger.js";
 import type { UserRole } from "@prisma/client";
 
 export const findUserByEmail = async (email: string) => {

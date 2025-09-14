@@ -5,8 +5,8 @@ import {
     deleteNote,
     getNoteById,
     updateNote,
-} from "../controllers/notes.controller";
-import { authenticateUser } from "../middlewares/authenticate.middleware";
+} from "../controllers/notes.controller.js";
+import { authenticateUser } from "../middlewares/authenticate.middleware.js";
 
 const router = express.Router();
 

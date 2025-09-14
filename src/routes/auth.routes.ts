@@ -7,8 +7,8 @@ import {
     logoutUser,
     updateRole,
     upgradePlan,
-} from "../controllers/auth.controller";
-import { authenticateUser } from "../middlewares/authenticate.middleware";
+} from "../controllers/auth.controller.js";
+import { authenticateUser } from "../middlewares/authenticate.middleware.js";
 
 const router = express.Router();
 

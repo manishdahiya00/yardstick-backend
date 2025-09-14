@@ -1,15 +1,15 @@
 import type { Request, Response } from "express";
-import logger from "../config/logger";
+import logger from "../config/logger.js";
 import {
     createNoteOfTenant,
     deleteNoteById,
     findNoteById,
     getAllNotes,
     updateNoteById,
-} from "../services/notes.service";
-import { noteSchema } from "../validations/notes.validation";
-import { formatZodError } from "../utils/zod.error";
-import { findTenantById } from "../services/user.service";
+} from "../services/notes.service.js";
+import { noteSchema } from "../validations/notes.validation.js";
+import { formatZodError } from "../utils/zod.error.js";
+import { findTenantById } from "../services/user.service.js";
 import { SubsPlan } from "@prisma/client";
 
 export const allNotes = async (req: Request, res: Response) => {

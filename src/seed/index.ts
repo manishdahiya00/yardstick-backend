@@ -1,4 +1,4 @@
-import db from "../config/db";
+import db from "../config/db.js";
 import { hash } from "argon2";
 
 async function main() {

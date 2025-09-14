@@ -1,6 +1,9 @@
 import type { Request, Response } from "express";
-import { inviteUserSchema, loginSchema } from "../validations/auth.validation";
-import { formatZodError } from "../utils/zod.error";
+import {
+    inviteUserSchema,
+    loginSchema,
+} from "../validations/auth.validation.js";
+import { formatZodError } from "../utils/zod.error.js";
 import {
     findAllUsers,
     findTenantById,
@@ -9,11 +12,11 @@ import {
     inviteUser,
     updatePlan,
     updateRoleOfUser,
-} from "../services/user.service";
+} from "../services/user.service.js";
 import { hash, verify } from "argon2";
 import jwt from "jsonwebtoken";
-import { ENV } from "../config/env";
-import logger from "../config/logger";
+import { ENV } from "../config/env.js";
+import logger from "../config/logger.js";
 import type { UserRole } from "@prisma/client";
 
 export const loginUser = async (req: Request, res: Response) => {

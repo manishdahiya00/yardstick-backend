@@ -1,7 +1,7 @@
 import createHttpError from "http-errors";
-import logger from "../config/logger";
-import type { NoteData } from "../types";
-import db from "../config/db";
+import logger from "../config/logger.js";
+import type { NoteData } from "../types/index.js";
+import db from "../config/db.js";
 
 export const getAllNotes = async (tenantId: string) => {
     try {

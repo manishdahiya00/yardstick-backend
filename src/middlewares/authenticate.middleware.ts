@@ -1,8 +1,8 @@
 import type { NextFunction, Request, Response } from "express";
-import logger from "../config/logger";
+import logger from "../config/logger.js";
 import jwt, { type JwtPayload } from "jsonwebtoken";
-import { findUserById } from "../services/user.service";
-import { ENV } from "../config/env";
+import { findUserById } from "../services/user.service.js";
+import { ENV } from "../config/env.js";
 
 export const authenticateUser = async (
     req: Request,

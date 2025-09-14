@@ -1,6 +1,6 @@
 # Backend
 
-This is the backend API for the Yardstick Assignment project. It is built using Bun (a fast JavaScript runtime), Express-style routing, Prisma ORM, and PostgreSQL. The backend provides authentication, notes management, and plan-based access control for the frontend application.
+This is the backend API for the Yardstick Assignment project. It is built using Node.js, Express-style routing, Prisma ORM, and PostgreSQL. The backend provides authentication, notes management, and plan-based access control for the frontend application.
 
 ---
 
@@ -12,7 +12,7 @@ The backend exposes a RESTful API for user authentication, notes CRUD operations
 
 ## Approach
 
-- **Bun** is used for fast server-side execution and development.
+- **Node.js** is used for server-side execution and development.
 - **Express-like structure**: Controllers, services, and middlewares are used for clean separation of concerns.
 - **Prisma ORM**: Handles all database interactions and migrations with PostgreSQL.
 - **Authentication**: JWT-based authentication with role-based access control (Manager/Member).
@@ -24,23 +24,76 @@ The backend exposes a RESTful API for user authentication, notes CRUD operations
 
 ## Getting Started
 
-To install dependencies:
+### Prerequisites
 
-```bash
-bun install
-```
+- [Node.js](https://nodejs.org/) (v18+ recommended)
+- [npm](https://www.npmjs.com/) (v9+ recommended)
+- [PostgreSQL](https://www.postgresql.org/) (for backend database)
 
-To run the backend server:
+### Setup
 
-```bash
-bun run dev
-```
+1. **Install dependencies:**
 
-To run database migrations:
+    ```sh
+    npm install
+    ```
 
-```bash
-bunx prisma migrate deploy
-```
+2. **Configure environment:**
+    - Copy `.env.example` to `.env` and set your database credentials.
+
+3. **Run database migrations:**
+
+    ```sh
+    npx prisma migrate deploy
+    ```
+
+4. **Seed the database (optional):**
+
+    ```sh
+    npm run seed
+    ```
+
+    > Make sure your `package.json` has a `seed` script like:
+    > `"seed": "ts-node src/seed/index.ts"`
+
+5. **Start the backend server (development):**
+
+    ```sh
+    npm run dev
+    ```
+
+    The API will be available at `http://localhost:8000`.
+
+6. **Build for production:**
+
+    ```sh
+    npm run build
+    ```
+
+7. **Start the backend server (production):**
+    ```sh
+    npm start
+    ```
+
+---
+
+## Scripts
+
+- `npm run dev` — Start backend in watch mode
+- `npm start` — Start backend in production
+- `npm run build` — Build backend for production
+- `npx prisma migrate dev` — Run migrations
+- `npm run seed` — Seed database
+
+---
+
+## License
+
+MIT
+
+---
+
+This project was created using Node.js and Prisma.
 
 To seed the database (optional):
 
