@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "bun run --watch src/server.ts",
     "start": "bun run src/server.ts",
+    "build": "tsc",
     "format:fix": "prettier . --write",
     "format:check": "prettier . --check",
     "lint:fix": "eslint . --fix",
